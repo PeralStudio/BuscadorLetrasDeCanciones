@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/BuscadorLetrasDeCanciones/precache-manifest.f9c6e2a96e631fc4ab788fb0cde1e112.js"
+  "/BuscadorLetrasDeCanciones/precache-manifest.79af8da25a2535b56acbf5f118e0301b.js"
 );
 
 self.addEventListener('message', (event) => {
