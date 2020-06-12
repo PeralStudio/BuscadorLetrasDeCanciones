@@ -1,4 +1,4 @@
-# Frontend- Buscador De Fotos React
+# Frontend- Buscador De Letras De Canciones React
 
 ![Design preview for Buscador De Letras De Canciones](./src/design/sample1.png) 
 
