@@ -74,11 +74,12 @@ const Formulario = ({guardarBusquedaLetra}) => {
                                     </div>
                                 </div>
                             </div>
-
+                            <div className="centrado">
                             <button 
                                 type="submit" 
                                 className="btn btn-primary float-right"
                             >Buscar</button>
+                            </div>
                         </fieldset>
 
                     </form>
