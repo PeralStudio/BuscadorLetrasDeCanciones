@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "42d5496d158e77b20d8f7bf54409a142",
+    "revision": "cbab4239fa45d2e99473a21f2b4ebb57",
     "url": "/BuscadorLetrasDeCanciones/index.html"
   },
   {
