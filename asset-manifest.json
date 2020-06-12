@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/BuscadorLetrasDeCanciones/static/css/main.7384ce32.chunk.css",
-    "main.js": "/BuscadorLetrasDeCanciones/static/js/main.4cab33b7.chunk.js",
-    "main.js.map": "/BuscadorLetrasDeCanciones/static/js/main.4cab33b7.chunk.js.map",
+    "main.js": "/BuscadorLetrasDeCanciones/static/js/main.56740b84.chunk.js",
+    "main.js.map": "/BuscadorLetrasDeCanciones/static/js/main.56740b84.chunk.js.map",
     "runtime-main.js": "/BuscadorLetrasDeCanciones/static/js/runtime-main.bcff7094.js",
     "runtime-main.js.map": "/BuscadorLetrasDeCanciones/static/js/runtime-main.bcff7094.js.map",
     "static/js/2.401f64b2.chunk.js": "/BuscadorLetrasDeCanciones/static/js/2.401f64b2.chunk.js",
     "static/js/2.401f64b2.chunk.js.map": "/BuscadorLetrasDeCanciones/static/js/2.401f64b2.chunk.js.map",
     "index.html": "/BuscadorLetrasDeCanciones/index.html",
-    "precache-manifest.658a2efe9bc3506e7e27d72787f3212a.js": "/BuscadorLetrasDeCanciones/precache-manifest.658a2efe9bc3506e7e27d72787f3212a.js",
+    "precache-manifest.f9c6e2a96e631fc4ab788fb0cde1e112.js": "/BuscadorLetrasDeCanciones/precache-manifest.f9c6e2a96e631fc4ab788fb0cde1e112.js",
     "service-worker.js": "/BuscadorLetrasDeCanciones/service-worker.js",
     "static/css/main.7384ce32.chunk.css.map": "/BuscadorLetrasDeCanciones/static/css/main.7384ce32.chunk.css.map",
     "static/js/2.401f64b2.chunk.js.LICENSE": "/BuscadorLetrasDeCanciones/static/js/2.401f64b2.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.bcff7094.js",
     "static/js/2.401f64b2.chunk.js",
     "static/css/main.7384ce32.chunk.css",
-    "static/js/main.4cab33b7.chunk.js"
+    "static/js/main.56740b84.chunk.js"
   ]
 }

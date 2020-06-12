@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "43ba5494a9cf878ff5396907da2f6369",
+    "revision": "ac5079b67af2684fb6dfa91c714a30a4",
     "url": "/BuscadorLetrasDeCanciones/index.html"
   },
   {
-    "revision": "c517a67033f34235a92e",
+    "revision": "0879c2b422d1133b3f8a",
     "url": "/BuscadorLetrasDeCanciones/static/css/main.7384ce32.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/BuscadorLetrasDeCanciones/static/js/2.401f64b2.chunk.js.LICENSE"
   },
   {
-    "revision": "c517a67033f34235a92e",
-    "url": "/BuscadorLetrasDeCanciones/static/js/main.4cab33b7.chunk.js"
+    "revision": "0879c2b422d1133b3f8a",
+    "url": "/BuscadorLetrasDeCanciones/static/js/main.56740b84.chunk.js"
   },
   {
     "revision": "f5e90643addda5d4b56c",
