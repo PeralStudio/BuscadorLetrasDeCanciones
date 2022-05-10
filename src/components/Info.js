@@ -6,7 +6,7 @@ const Info = ({info}) => {
 
     const { strArtistThumb, strGenre, strBiographyES } = info;
     
-    return ( 
+    return (
         <div className="card border-light">
             <div className="card-header bg-primary text-light font-weight-bold">
                 Información Artista
@@ -30,7 +30,7 @@ const Info = ({info}) => {
                 </p>
             </div>
         </div>
-     );
+    );
 }
- 
+
 export default Info;
