@@ -1,36 +1,121 @@
-import React from 'react';
+import React from "react";
 
-const Info = ({info}) => {
+const Info = ({ info }) => {
+    if (Object.keys(info).length === 0) return null;
 
-    if(Object.keys(info).length === 0 ) return null;
-
-    const { strArtistThumb, strGenre, strBiographyES } = info;
-    
-    return (
-        <div className="card border-light">
-            <div className="card-header bg-primary text-light font-weight-bold">
-                Información Artista
+    // Si no se encontró el artista
+    if (info.notFound) {
+        return (
+            <div className="artist-card error-card">
+                <div className="error-content">
+                    <div className="error-icon">
+                        <span role="img" aria-label="advertencia">
+                            🔍
+                        </span>
+                    </div>
+                    <h3 className="error-title">Artista no encontrado</h3>
+                    <p className="error-text">
+                        No se encontró información sobre <strong>"{info.artistName}"</strong>.
+                    </p>
+                    <p className="error-hint">
+                        Verifica que el nombre del artista esté escrito correctamente o intenta con
+                        otro artista.
+                    </p>
+                </div>
             </div>
-            <div className="card-body">
-                <img src={strArtistThumb} alt="Logo Artista" />
-                <p className="card-text">Género: {strGenre}</p>
-                <h2 className="card-text">Biografía:</h2>
-                <p className="card-text">{strBiographyES}</p>
-                <p className="card-text">
-                    <a href={`https://${info.strFacebook}`} target="_blank" rel="noopener noreferrer">
-                        <i className="fab fa-facebook"></i>
-                    </a>
-                    <a href={`https://${info.strTwitter}`} target="_blank" rel="noopener noreferrer">
-                        <i className="fab fa-twitter"></i>
-                    </a>
-                    {/* <a href={`${info.strLastFMChart}`} target="_blank" rel="noopener noreferrer">
-                        <i className="fab fa-lastfm"></i>
-                    </a> */}
-                    
-                </p>
+        );
+    }
+
+    const {
+        strArtist,
+        strArtistThumb,
+        strGenre,
+        strStyle,
+        strBiographyES,
+        strCountry,
+        intFormedYear,
+        intMembers,
+        strLabel
+    } = info;
+
+    return (
+        <div className="artist-card">
+            <div className="artist-image-wrapper">
+                <img src={strArtistThumb} alt={strArtist} className="artist-image" />
+                {strGenre && <div className="artist-genre">{strGenre}</div>}
+            </div>
+            <div className="artist-content">
+                <h3 className="artist-name">{strArtist}</h3>
+
+                <div className="artist-details">
+                    {strCountry && (
+                        <div className="detail-item">
+                            <span className="detail-icon" role="img" aria-label="ubicación">
+                                📍
+                            </span>
+                            <span>{strCountry}</span>
+                        </div>
+                    )}
+                    {intFormedYear && (
+                        <div className="detail-item">
+                            <span className="detail-icon" role="img" aria-label="calendario">
+                                📅
+                            </span>
+                            <span>Formado en {intFormedYear}</span>
+                        </div>
+                    )}
+                    {strStyle && (
+                        <div className="detail-item">
+                            <span className="detail-icon" role="img" aria-label="música">
+                                🎸
+                            </span>
+                            <span>{strStyle}</span>
+                        </div>
+                    )}
+                    {strLabel && (
+                        <div className="detail-item">
+                            <span className="detail-icon" role="img" aria-label="disco">
+                                💿
+                            </span>
+                            <span>{strLabel}</span>
+                        </div>
+                    )}
+                </div>
+
+                {strBiographyES && (
+                    <div className="artist-bio">
+                        <h4 className="bio-title">Biografía</h4>
+                        <p>{strBiographyES}</p>
+                    </div>
+                )}
+
+                {(info.strFacebook || info.strTwitter || info.strWebsite) && (
+                    <div className="social-links">
+                        {info.strWebsite && (
+                            <a
+                                href={`https://${info.strWebsite}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="social-link website"
+                            >
+                                <i className="fas fa-globe"></i>
+                            </a>
+                        )}
+                        {info.strFacebook && (
+                            <a
+                                href={`https://${info.strFacebook}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="social-link facebook"
+                            >
+                                <i className="fab fa-facebook"></i>
+                            </a>
+                        )}
+                    </div>
+                )}
             </div>
         </div>
     );
-}
+};
 
 export default Info;
