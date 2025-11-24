@@ -2,13 +2,9 @@
 
 Aplicación web moderna para buscar letras de canciones e información de artistas con un diseño elegante en modo oscuro.
 
-<<<<<<< HEAD
 ![Design preview](./src/design/sample1.png)
 
 ## ✨ Características
-=======
-# Installation
->>>>>>> fd1445d9dcbdb90b5e1dae21dc92f5358171007e
 
 -   🔍 Búsqueda de letras de canciones en tiempo real
 -   🎤 Información detallada de artistas (biografía, país, año de formación, género)
