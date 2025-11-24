@@ -34,8 +34,9 @@ const Info = ({ info }) => {
         strBiographyES,
         strCountry,
         intFormedYear,
-        intMembers,
-        strLabel
+        strLabel,
+        strWebsite,
+        strFacebook
     } = info;
 
     return (
@@ -89,24 +90,26 @@ const Info = ({ info }) => {
                     </div>
                 )}
 
-                {(info.strFacebook || info.strTwitter || info.strWebsite) && (
+                {(strWebsite || strFacebook) && (
                     <div className="social-links">
-                        {info.strWebsite && (
+                        {strWebsite && (
                             <a
-                                href={`https://${info.strWebsite}`}
+                                href={`https://${strWebsite}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="social-link website"
+                                aria-label="Sitio web del artista"
                             >
                                 <i className="fas fa-globe"></i>
                             </a>
                         )}
-                        {info.strFacebook && (
+                        {strFacebook && (
                             <a
-                                href={`https://${info.strFacebook}`}
+                                href={`https://${strFacebook}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="social-link facebook"
+                                aria-label="Facebook del artista"
                             >
                                 <i className="fab fa-facebook"></i>
                             </a>

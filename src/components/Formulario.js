@@ -1,77 +1,85 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 
-const Formulario = ({guardarBusquedaLetra}) => {
-
-    const [busqueda, guardarBusqueda] = useState({
+const Formulario = ({ onSearch }) => {
+    const [formData, setFormData] = useState({
         artista: '',
         cancion: ''
     });
-    const [ error, guardarError] = useState(false);
+    const [error, setError] = useState(false);
 
-    const { artista, cancion } = busqueda;
+    const { artista, cancion } = formData;
 
-    // función a cada input para leer su contenido
-    const actualizarState = e => {
-        guardarBusqueda({
-            ...busqueda,
-            [e.target.name] : e.target.value
-        })
-    }
+    const handleInputChange = useCallback((e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+        if (error) setError(false);
+    }, [error]);
 
-    // consultar las apis
-    const buscarInformacion = e => {
+    const handleSubmit = useCallback((e) => {
         e.preventDefault();
 
-        if(artista.trim() === '' || cancion.trim() === ''){
-            guardarError(true);
+        if (!artista.trim() || !cancion.trim()) {
+            setError(true);
             return;
         }
-        guardarError(false);
-        // Todo bien, pasar al componente principal
 
-        guardarBusquedaLetra(busqueda);
-    }
+        onSearch(formData);
+    }, [artista, cancion, formData, onSearch]);
 
     return ( 
         <div className="search-header">
             <div className="container">
-                <form onSubmit={buscarInformacion} className="search-form">
-                    <h1 className="search-title"><span role="img" aria-label="notas musicales">🎶</span> Buscador de Letras de Canciones</h1>
-                    {error && <div className="error-message">Todos los campos son obligatorios</div>}
+                <form onSubmit={handleSubmit} className="search-form">
+                    <h1 className="search-title">
+                        <span role="img" aria-label="notas musicales">🎶</span> 
+                        Buscador de Letras de Canciones
+                    </h1>
+                    {error && (
+                        <div className="error-message">
+                            Todos los campos son obligatorios
+                        </div>
+                    )}
                     
                     <div className="search-inputs">
                         <div className="input-group">
-                            <label>Artista</label>
+                            <label htmlFor="artista">Artista</label>
                             <input
+                                id="artista"
                                 type="text"
                                 name="artista"
                                 placeholder="Ej: Coldplay"
-                                onChange={actualizarState}
+                                onChange={handleInputChange}
                                 value={artista}
                                 className="search-input"
+                                autoComplete="off"
                             />
                         </div>
                         
                         <div className="input-group">
-                            <label>Canción</label>
+                            <label htmlFor="cancion">Canción</label>
                             <input
+                                id="cancion"
                                 type="text"
                                 name="cancion"
                                 placeholder="Ej: Yellow"
-                                onChange={actualizarState}
+                                onChange={handleInputChange}
                                 value={cancion}
                                 className="search-input"
+                                autoComplete="off"
                             />
                         </div>
                     </div>
                     
                     <button type="submit" className="search-button">
-                        <span><span role="img" aria-label="lupa">🔍</span> Buscar</span>
+                        <span role="img" aria-label="lupa">🔍</span> Buscar
                     </button>
                 </form>
             </div>
         </div>
-     );
-}
- 
+    );
+};
+
 export default Formulario;
