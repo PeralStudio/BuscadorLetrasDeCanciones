@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/BuscadorLetrasDeCanciones/static/css/main.f3c9f861.chunk.css",
-    "main.js": "/BuscadorLetrasDeCanciones/static/js/main.04832896.chunk.js",
-    "main.js.map": "/BuscadorLetrasDeCanciones/static/js/main.04832896.chunk.js.map",
+    "main.js": "/BuscadorLetrasDeCanciones/static/js/main.0515d99c.chunk.js",
+    "main.js.map": "/BuscadorLetrasDeCanciones/static/js/main.0515d99c.chunk.js.map",
     "runtime-main.js": "/BuscadorLetrasDeCanciones/static/js/runtime-main.bcff7094.js",
     "runtime-main.js.map": "/BuscadorLetrasDeCanciones/static/js/runtime-main.bcff7094.js.map",
-    "static/js/2.401f64b2.chunk.js": "/BuscadorLetrasDeCanciones/static/js/2.401f64b2.chunk.js",
-    "static/js/2.401f64b2.chunk.js.map": "/BuscadorLetrasDeCanciones/static/js/2.401f64b2.chunk.js.map",
+    "static/js/2.db3f3f6c.chunk.js": "/BuscadorLetrasDeCanciones/static/js/2.db3f3f6c.chunk.js",
+    "static/js/2.db3f3f6c.chunk.js.map": "/BuscadorLetrasDeCanciones/static/js/2.db3f3f6c.chunk.js.map",
     "index.html": "/BuscadorLetrasDeCanciones/index.html",
-    "precache-manifest.d6d48773b58bee530ed6e68b838a1cd2.js": "/BuscadorLetrasDeCanciones/precache-manifest.d6d48773b58bee530ed6e68b838a1cd2.js",
+    "precache-manifest.ff8aa5d6eb2cde67eb9a1166c647c2c3.js": "/BuscadorLetrasDeCanciones/precache-manifest.ff8aa5d6eb2cde67eb9a1166c647c2c3.js",
     "service-worker.js": "/BuscadorLetrasDeCanciones/service-worker.js",
     "static/css/main.f3c9f861.chunk.css.map": "/BuscadorLetrasDeCanciones/static/css/main.f3c9f861.chunk.css.map",
-    "static/js/2.401f64b2.chunk.js.LICENSE": "/BuscadorLetrasDeCanciones/static/js/2.401f64b2.chunk.js.LICENSE"
+    "static/js/2.db3f3f6c.chunk.js.LICENSE": "/BuscadorLetrasDeCanciones/static/js/2.db3f3f6c.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.bcff7094.js",
-    "static/js/2.401f64b2.chunk.js",
+    "static/js/2.db3f3f6c.chunk.js",
     "static/css/main.f3c9f861.chunk.css",
-    "static/js/main.04832896.chunk.js"
+    "static/js/main.0515d99c.chunk.js"
   ]
 }
